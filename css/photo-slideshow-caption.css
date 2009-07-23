@@ -13,13 +13,14 @@
 
 
 * {
-	padding: 0;
-	margin: 0;
+    padding: 0;
+    margin: 0;
 }
 
 body {
     background: #ccc;
 }
+
 #container {
     width: 596px;
     margin:auto;
@@ -29,65 +30,64 @@ body {
 /* the actual container for the slideshow */
 #slideshow-box {
     width: 596px;
-	min-height: 335px;
+    min-height: 335px;
 }
 
 /* Individual slide */
 .slide {
     width: 596px;
-	height: 335px;
-	overflow: hidden;
+    height: 335px;
+    overflow: hidden;
 }
 
 .slide a {
     text-decoration: none;
 }
 .slide a img {
-	border: none;
+    border: none;
 }
 
 /* slide text */
 .slide a .title {
-	color: white;
-	height:  60px;
-	display:  block;
-	font-size: 1.5em;
-	background: url('../images/copybar.png') no-repeat;
-	padding-left: 8px;
-	top: -80px;
-	width:  596px;
-	position: relative;
-	line-height: 1.7em;
+    color: white;
+    height:  60px;  /* Height of caption box */
+    display:  block;
+    font-size: 1.5em;
+    background: url('../images/copybar.png') no-repeat;
+    padding-left: 8px;
+    top: -80px;    /* Pull it up to overlay on the image */
+    width:  596px;
+    position: relative;
+    line-height: 1.7em;
 }
 
 .slide a .subtitle {
-	display: block;
-	font-size: .7em;
-	line-height: 1em;
+    display: block;
+    font-size: .7em;  /* relative to .title */
+    line-height: 1em;
 }
 
 /* I use a sprite map to handle the gradient bars */
+/* Since the whole slide is under the anchor tag
+    a:hover works to change the copy bar */
 .slide a .purple {
-	background-position: 0 -0px;
+    background-position: 0 -0px;
 }
 .slide a:hover .purple {
-	background-position: 0 -60px;
+    background-position: 0 -60px;
 }
-
 .slide a .orange {
-	background-position: 0 -120px;
+    background-position: 0 -120px;
 }
 .slide a:hover .orange {
 	background-position: 0 -180px;
 }
-
 .slide a .blue {
 	background-position: 0 -240px;
 }
 .slide a:hover .blue {
 	background-position: 0 -300px;
 }
-
 .slide a .red {
 	background-position: 0 -360px;
 }
@@ -100,5 +100,3 @@ body {
 .slide a:hover .green {
 	background-position: 0 -540px;
 }
-
-
