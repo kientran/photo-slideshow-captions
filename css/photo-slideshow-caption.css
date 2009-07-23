@@ -1,0 +1,104 @@
+/*
+    Photo Slideshow with Captions 
+
+    @author:    Kien Tran (kientran@kientran.com)
+    @version:   1.0
+    @date:      22 July 2009
+
+    This project aims to create a XHTML compliant slideshow
+    that supports text captioning that will failover
+    correctly on disabled javascript, images, or CSS.
+
+*/
+
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+    background: #ccc;
+}
+#container {
+    width: 596px;
+    margin:auto;
+    margin-top: 30px;
+}
+
+/* the actual container for the slideshow */
+#slideshow-box {
+    width: 596px;
+	min-height: 335px;
+}
+
+/* Individual slide */
+.slide {
+    width: 596px;
+	height: 335px;
+	overflow: hidden;
+}
+
+.slide a {
+    text-decoration: none;
+}
+.slide a img {
+	border: none;
+}
+
+/* slide text */
+.slide a .title {
+	color: white;
+	height:  60px;
+	display:  block;
+	font-size: 1.5em;
+	background: url('../images/copybar.png') no-repeat;
+	padding-left: 8px;
+	top: -80px;
+	width:  596px;
+	position: relative;
+	line-height: 1.7em;
+}
+
+.slide a .subtitle {
+	display: block;
+	font-size: .7em;
+	line-height: 1em;
+}
+
+/* I use a sprite map to handle the gradient bars */
+.slide a .purple {
+	background-position: 0 -0px;
+}
+.slide a:hover .purple {
+	background-position: 0 -60px;
+}
+
+.slide a .orange {
+	background-position: 0 -120px;
+}
+.slide a:hover .orange {
+	background-position: 0 -180px;
+}
+
+.slide a .blue {
+	background-position: 0 -240px;
+}
+.slide a:hover .blue {
+	background-position: 0 -300px;
+}
+
+.slide a .red {
+	background-position: 0 -360px;
+}
+.slide a:hover .red {
+	background-position: 0 -420px;
+}
+.slide a .green {
+	background-position: 0 -480px;
+}
+.slide a:hover .green {
+	background-position: 0 -540px;
+}
+
+

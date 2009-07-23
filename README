@@ -1,0 +1,32 @@
+Photo Slideshow with Captions 
+
+author:    Kien Tran (kientran@kientran.com)
+version:   1.0
+date:      22 July 2009
+license:   MIT (http://www.opensource.org/licenses/mit-license.php)
+
+This project aims to create a XHTML compliant slideshow
+that supports text captioning that will failover
+correctly on disabled javascript, images, or CSS.
+
+This caption bar will fade in on a slide transition
+and itself uses a alpha transparent PNG to reveal the
+photo behind.  Note that in IE the alpha system is
+quirky and it's just easier to remove the fade.
+
+Inspiration for this project comes from Revision3's 2009
+homepage look that is built similarly but not W3C
+compliant.
+
+I include 5 color samples in a sprite to demo that function.
+
+I use the jQuery.Cycle.lite plugin for the slideshow itself
+http://malsup.com/jquery/cycle/
+
+While the slideshow itself will work in IE6, the transparency will
+fail.
+
+----
+If you run this code agaisnt w3.org's validator,
+the CC attribution boxes may fail.  That's outside
+the scope of the project.
