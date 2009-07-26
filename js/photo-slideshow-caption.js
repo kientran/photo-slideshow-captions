@@ -2,8 +2,8 @@
     Photo Slideshow with Captions 
 
     @author:    Kien Tran (kientran@kientran.com)
-    @version:   1.0
-    @date:      22 July 2009
+    @version:   1.1
+    @date:      26 July 2009
 
     This project aims to create a XHTML compliant slideshow
     that supports text captioning that will failover
@@ -34,8 +34,51 @@ function onAfter() {
 	}
 };
 
+function captionHovers() {
+
+    // Adjust the title to accomodate a new span
+    $('.slide a .title').css({top: '-140px'});
+
+    // Insert the new crossfade span and remove
+    // the regular hover color class.  Replace it
+    // with a special class that won't trigger
+    // hover switch
+    $('.slide a .title.orange')
+        .removeClass('orange')
+        .addClass('nohvorange')
+        .before('<span class="hover hvorange"></span>');
+    $('.slide a .title.purple')
+        .removeClass('purple')
+        .addClass('nohvpurple')
+        .before('<span class="hover hvpurple"></span>');
+    $('.slide a .title.blue')
+        .removeClass('blue')
+        .addClass('nohvblue')
+        .before('<span class="hover hvblue"></span>');
+    $('.slide a .title.red')
+        .removeClass('red')
+        .addClass('nohvred')
+        .before('<span class="hover hvred"></span>');
+    $('.slide a .title.green')
+        .removeClass('green')
+        .addClass('nohvgreen')
+        .before('<span class="hover hvgreen"></span>');
+
+    // Hide the hovers
+    $('.hover').css({opacity: 0});
+    // Bind hover state to slides, fade in and out span
+    $('.slide').hover(function () {
+            $('.hover').stop().fadeTo(250, 1);
+        }, function () {
+            $('.hover').stop().fadeTo(250, 0);
+    });
+
+};
+
 /* calls jQuery.cycle plugin */
 $(document).ready(function(){
+
+    captionHovers(); 
 	$('#slideshow-box').cycle({
 		speed: 1000,
 		timeout: 6000,
@@ -44,4 +87,5 @@ $(document).ready(function(){
 		pause: true,
 		delay: 2000
 	});
+
 });
