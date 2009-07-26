@@ -53,9 +53,7 @@ body {
     height:  60px;  /* Height of caption box */
     display:  block;
     font-size: 1.5em;
-    background: url('../images/copybar.png') no-repeat;
     padding-left: 8px;
-    top: -80px;    /* Pull it up to overlay on the image */
     width:  596px;
     position: relative;
     line-height: 1.7em;
@@ -70,6 +68,22 @@ body {
 /* I use a sprite map to handle the gradient bars */
 /* Since the whole slide is under the anchor tag
     a:hover works to change the copy bar */
+
+.hover {
+    height: 60px;
+    background: black;
+    display: block;
+    position: relative;
+    top: -80px;
+}
+
+.onHoverOrange {
+    height: 60px;
+    background: red;
+    display: block;
+    position: relative;
+}
+
 .slide a .purple {
     background-position: 0 -0px;
 }
