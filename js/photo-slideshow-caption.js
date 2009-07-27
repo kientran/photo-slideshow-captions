@@ -17,7 +17,7 @@
 */
 
 
-/* Call back function to animate the caption */
+/* Call back function to animate the caption on transition */
 function onBefore() {
 	if ($.browser.msie && $.browser.version < 9 ) {
     	$('.title').hide(); /* IE Hack since alpha doesn't work*/
@@ -35,6 +35,12 @@ function onAfter() {
 };
 
 function captionHovers() {
+
+    // In theory, you could use IE8 but the alpha trans is
+    // messed up.  Someting to fix in the future.  If you
+    // use a non alpha trans caption bg, you could use this
+    // on IE8, and maybe even IE7.
+	if ($.browser.msie && $.browser.version < 9 ) return;
 
     // Adjust the title to accomodate a new span
     $('.slide a .title').css({top: '-140px'});
@@ -66,11 +72,12 @@ function captionHovers() {
 
     // Hide the hovers
     $('.hover').css({opacity: 0});
-    // Bind hover state to slides, fade in and out span
+    // Bind hover state to slides, fade in and out span.hover
+    // for that slide only
     $('.slide').hover(function () {
-            $('.hover').stop().fadeTo(250, 1);
+        $('span.hover', this).stop().fadeTo(250, 1);
         }, function () {
-            $('.hover').stop().fadeTo(250, 0);
+        $('span.hover', this).stop().fadeTo(250, 0);
     });
 
 };
