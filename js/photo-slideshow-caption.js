@@ -3,7 +3,7 @@
 
     @author:    Kien Tran (kientran@kientran.com)
     @version:   1.1
-    @date:      26 July 2009
+    @date:      27 July 2009
 
     This project aims to create a XHTML compliant slideshow
     that supports text captioning that will failover

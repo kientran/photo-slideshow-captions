@@ -1,0 +1,29 @@
+commit e8c90a0228e7f079b0832efbe565b51031f443af
+Author: Kien Tran <kientran@gmail.com>
+Date:   Mon Jul 27 01:31:41 2009 -0500
+
+    Bind the hover crossfade event to individual slide
+
+commit 375570caea5dc57eff0f35edaac13c03f4e663e0
+Author: Kien Tran <kientran@gmail.com>
+Date:   Sun Jul 26 03:49:00 2009 -0500
+
+    Better design to accomodate failover better
+
+commit b15d6bd2e179d39daa1543f13f6a8a49a09acfd4
+Author: Kien Tran <kientran@gmail.com>
+Date:   Sun Jul 26 01:54:53 2009 -0500
+
+    Branch for hover animations
+
+commit 574c454adf179cbfc57882d7b91de4c8798d9100
+Author: Kien Tran <kientran@gmail.com>
+Date:   Thu Jul 23 03:41:02 2009 -0500
+
+    Documentation and code cleanup.
+
+commit 1e83b388f197da9bf3149317b4854a7201f31fc4
+Author: Kien Tran <kientran@gmail.com>
+Date:   Wed Jul 22 20:37:53 2009 -0500
+
+    Initial Commit
