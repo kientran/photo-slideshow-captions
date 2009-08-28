@@ -2,8 +2,8 @@
     Photo Slideshow with Captions 
 
     @author:    Kien Tran (kientran@kientran.com)
-    @version:   1.1
-    @date:      27 July 2009
+    @version:   1.2
+    @date:      5 August 2009 
 
     This project aims to create a XHTML compliant slideshow
     that supports text captioning that will failover
@@ -82,17 +82,41 @@ function captionHovers() {
 
 };
 
+function controlHovers() {
+	if ($.browser.msie && $.browser.version < 9 ) {
+        $('#slideshow-box').hover(function () {
+            $('#prev').show();
+            $('#next').show();
+            }, function() {
+            $('#prev').hide();
+            $('#next').hide();
+        }); 
+
+    } else {
+        $('#slideshow-box').hover(function () {
+            $('#prev').fadeIn();
+            $('#next').fadeIn();
+            }, function() {
+            $('#prev').fadeOut();
+            $('#next').fadeOut();
+        }); 
+    }
+}
+
 /* calls jQuery.cycle plugin */
 $(document).ready(function(){
-
+ 
+    controlHovers(); 
     captionHovers(); 
-	$('#slideshow-box').cycle({
+	$('#slides').cycle({
 		speed: 1000,
 		timeout: 6000,
 		before: onBefore,
 		after: onAfter,
 		pause: true,
-		delay: 2000
+		delay: 2000,
+        next: '#next',
+        prev: '#prev'
 	});
 
 });
